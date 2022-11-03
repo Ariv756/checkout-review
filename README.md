@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Welcome 👋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi, this is my submission for the frontend tech test, below you can find a brief overview of how to get things started.
 
-## Available Scripts
+## Starting your review app.
 
-In the project directory, you can run:
+To get started run `npm install` in the root of the folder.
 
-### `yarn start`
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once the install is finished, run `npm run start`
+```bash
+npm run start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If you would like to run the tests seperately you can do this by running `npm run test`
+```bash
+npm run test
+```
 
-### `yarn test`
+When you fist intialise your app youll be able to see a screen with a form and an error message.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+` No data available, please check your Api connection.`
 
-### `yarn build`
+If you do get this error, this is expected as this means your local API isn't running.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Starting you local API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get you api started go to the path `/api`, In here 
+run `npm install` in the root of the folder.
 
-### `yarn eject`
+```bash
+cd api/
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Once the install is finished, run `npm run start` If successfull you should receive the message
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+> api@1.0.0 start
+> node index.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+API serve is running...
+```
+Once you get this, you can navigation back to the page `http://localhost:3000` and preview your reviews.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Notes
+I have followed an atomic design approach in the way I have structured my files.
+```
+/src
+ /components
+  /Component
+    index.tsx
+    Component.tsx
+    Component.module.tsx
+    Component.test.tsx
+ /utils
+ App.tsx
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I created the api provided to store the reviews locally and provide different end points for us to be able to retrieve `reviews, average and post new reviews`. I havent cleaned or commented this section of the test as this was just used to display the data rather than showcase my knowledge of Node.
+
+Thank you for taking the time to review this,
+Alex
